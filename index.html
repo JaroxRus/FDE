@@ -52,6 +52,15 @@ body {
   background: url("2.png") no-repeat
     center top/cover;
 }
+
+.slider a {
+  display: block;
+  height: 100%;
+}
+
+.slider a .slide {
+  height: 100%;
+}
   
 .buttons button#prev {
   position: absolute;
@@ -104,6 +113,8 @@ body {
 
   <!-- partial:index.partial.html -->
   <div class="slider">
+    <div class="slide current"></div>
+    <div class="slide"></div>
   <a href="https://www.google.com" target="_blank">
     <div class="slide current"></div>
   </a>

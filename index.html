@@ -125,8 +125,7 @@ body {
   </div>
   <!-- partial -->
   <script>
-const slides = document.querySelectorAll(".slide-container .slide");
-const slideContainers = document.querySelectorAll(".slider a");
+const slideContainers = document.querySelectorAll(".slide-container");
 const nextButton = document.getElementById("next");
 const prevButton = document.getElementById("prev");
 const auto = true;
@@ -134,9 +133,9 @@ const intervalTime = 5000;
 let slideInterval;
 
 const nextSlide = () => {
-  const current = document.querySelector(".slider a .current");
+  const current = document.querySelector(".slide-container .current");
   current.classList.remove("current");
-  let next = current.parentElement.nextElementSibling;
+  let next = current.parentElement.parentElement.nextElementSibling;
   if (next) {
     next.querySelector('.slide').classList.add("current");
   } else {
@@ -145,9 +144,9 @@ const nextSlide = () => {
 };
 
 const prevSlide = () => {
-  const current = document.querySelector(".slider a .current");
+  const current = document.querySelector(".slide-container .current");
   current.classList.remove("current");
-  let prev = current.parentElement.previousElementSibling;
+  let prev = current.parentElement.parentElement.previousElementSibling;
   if (prev) {
     prev.querySelector('.slide').classList.add("current");
   } else {

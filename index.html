@@ -20,7 +20,7 @@ body {
   background-color: #362a2b;
   color: #e5ebf3;
 }
-
+  
 .slider {
   position: relative;
   width: 100vw;
@@ -43,14 +43,12 @@ body {
 }
 
 
-.slide:first-child {
-  background: url("1.png") no-repeat
-    center top/cover;
+.slider a:first-of-type .slide {
+  background: url("1.png") no-repeat center top/cover;
 }
 
-.slide:nth-child(2) {
-  background: url("2.png") no-repeat
-    center top/cover;
+.slider a:nth-of-type(2) .slide {
+  background: url("2.png") no-repeat center top/cover;
 }
 
 .buttons button#prev {

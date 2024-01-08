@@ -3,14 +3,13 @@
 .slide .content {
   position: absolute;
   bottom: 70px;
-  left: 10%; /* Center the content */
-  transform: translateX(-10%); /* Center the content horizontally */
-  opacity: 1; /* Make it visible */
+  left: -600px;
+  opacity: 0;
   width: 600px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #333;
   padding: 35px;
-  z-index: 2; /* Ensure it's above other elements */
+  z-index: 2;
 }
 
 * {
@@ -53,9 +52,9 @@ body {
 }
 
 .slide.current .content {
-  transform: translateX(100px);
-  transition: all 0.7s ease-in-out 0.3s;
   opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
 }
 
 .buttons button {
@@ -96,12 +95,6 @@ body {
     left: 0;
     width: 100%;
   }
-
-  .slide.current .content {
-    transform: translateY(-100px);
-  }
-}
-
 /* Backgorund Images */
  
 .slide:first-child {
@@ -110,5 +103,9 @@ body {
 }
 .slide:nth-child(2) {
   background: url("2.png") no-repeat
+    center top/cover;
+}
+.slide:nth-child(3) {
+  background: url("3.png") no-repeat
     center top/cover;
 }

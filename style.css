@@ -4,14 +4,21 @@
   position: absolute;
   bottom: 70px;
   left: 50%; /* Center the content */
-  transform: translateX(-50%); /* Center the content horizontally */
-  opacity: 1; /* Make it visible */
+  transform: translateX(-50%) translateY(0px);
+  opacity: 0;
   width: 600px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #333;
   padding: 35px;
-  z-index: 2; /* Ensure it's above other elements */
+  z-index: 2;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
+
+.slide .content {
+  /* ... остальные стили ... */
+ /* Изменено для начального положения */
+ /* Скрываем для начала */
+
 
 * {
   box-sizing: border-box;
@@ -53,10 +60,8 @@ body {
 }
 
 .slide.current .content {
-  transform: translateX(600px);
-  transition: all 0.7s ease-in-out 0.3s;
+  transform: translateX(-50%) translateY(20px);
   opacity: 1;
-}
 
 .buttons button {
   position: absolute;

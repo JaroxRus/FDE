@@ -13,7 +13,20 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
-      @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: 50%; /* Center the content */
+  transform: translateX(-50%); /* Center the content horizontally */
+  opacity: 1; /* Make it visible */
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 35px;
+  z-index: 2; /* Ensure it's above other elements */
+}
 
 * {
   box-sizing: border-box;
@@ -49,25 +62,18 @@ body {
   opacity: 1;
 }
 
-.slide .content {
-  position: absolute;
-  bottom: 70px;
-  left: -600px;
-  opacity: 0;
-  width: 600px;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #333;
-  padding: 35px;
-}
-
 .slide .content h1 {
   margin-bottom: 10px;
 }
 
 .slide.current .content {
-  opacity: 1;
   transform: translateX(600px);
   transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button {
+  position: absolute;
+  z-index: 3;
 }
 
 .buttons button#next {
@@ -119,6 +125,7 @@ body {
   background: url("2.png") no-repeat
     center top/cover;
 }
+
 
     </style>
   </head>

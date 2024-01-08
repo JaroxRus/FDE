@@ -44,7 +44,7 @@ body {
 
 .slide.current {
   opacity: 1;
-  z-index: 1;
+  z-index: 3;
 }
 
 .slide .content h1 {
@@ -54,6 +54,7 @@ body {
 
  .slide.current .content h1 {
   margin-bottom: 10px;
+  color: #000;
   opacity: 1;
 }     
 

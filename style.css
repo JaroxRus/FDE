@@ -3,8 +3,8 @@
 .slide .content {
   position: absolute;
   bottom: 70px;
-  left: 50%; /* Center the content */
-  transform: translateX(-50%); /* Center the content horizontally */
+  left: 10%; /* Center the content */
+  transform: translateX(-10%); /* Center the content horizontally */
   opacity: 1; /* Make it visible */
   width: 600px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -53,7 +53,7 @@ body {
 }
 
 .slide.current .content {
-  transform: translateX(600px);
+  transform: translateX(100px);
   transition: all 0.7s ease-in-out 0.3s;
   opacity: 1;
 }
@@ -98,7 +98,7 @@ body {
   }
 
   .slide.current .content {
-    transform: translateY(-300px);
+    transform: translateY(-100px);
   }
 }
 

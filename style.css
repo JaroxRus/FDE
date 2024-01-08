@@ -51,6 +51,11 @@ body {
   opacity: 0;
 }
 
+ .slide.current .content h1 {
+  margin-bottom: 10px;
+  opacity: 1;
+}     
+
 .slide.current .content {
   opacity: 1;
   transform: translateX(600px);

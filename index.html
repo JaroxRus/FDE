@@ -53,6 +53,15 @@ body {
     center top/cover;
 }
 
+.slider a {
+  display: block;
+  height: 100%;
+}
+
+.slider a .slide {
+  height: 100%;
+}
+  
 .buttons button#prev {
   position: absolute;
   top: 50%;
@@ -102,18 +111,15 @@ body {
 
 <body>
 
-<a href="https://www.google.com">
-    <img src="1.png" alt="google">
-</a>
-
-<a href="https://www.apple.com">
-    <img src="2.png" alt="apple">
-</a>
-  
   <!-- partial:index.partial.html -->
   <div class="slider">
+  <a href="https://www.google.com" target="_blank">
     <div class="slide current"></div>
+  </a>
+  <a href="https://www.apple.com" target="_blank">
     <div class="slide"></div>
+  </a>
+</div>
 
   </div>
   <div class="buttons">
